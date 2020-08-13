@@ -1,6 +1,8 @@
 ;;; MELPA https://melpa.org/#/getting-started
 ;;; REACT https://gist.github.com/CodyReichert/9dbc8bd2a104780b64891d8736682cea
 ;;; http://web-mode.org/
+;;; https://github.com/jaypei/emacs-neotree
+
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
@@ -21,7 +23,13 @@
 (setq web-mode-content-types-alist '(("jsx" . "\\.js[x]?\\'")))
 (defun web-mode-init-hook ()
   "Hooks for Web mode.  Adjust indent."
-  (setq web-mode-markup-indent-offset 2))
+  (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-code-indent-offset 2)
+  (setq web-mode-css-indent-offset 2)
+  (setq web-mode-indent-style 2)
+  (setq web-mode-enable-auto-closing nil)
+  (setq web-mode-enable-auto-quoting nil)
+  )
 (add-hook 'web-mode-hook  'web-mode-init-hook)
 
 (require 'flycheck)
@@ -32,7 +40,8 @@
 (flycheck-add-mode 'javascript-eslint 'web-mode)
 ;; Enable flycheck globally
 (add-hook 'after-init-hook #'global-flycheck-mode)
-;;; end react dev ;;;
+(require 'neotree)
+;;; react dev ;;;
 
 
 (setq create-lockfiles nil)
@@ -48,7 +57,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(inhibit-startup-screen t)
- '(package-selected-packages (quote (flycheck web-mode))))
+ '(package-selected-packages (quote (neotree flycheck web-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -61,6 +70,7 @@
         indent-tabs-mode nil)
 
 (setq-default c-basic-offset 2)
+
 (tool-bar-mode -1)
 
 ;; pour pouvoir scroller normalement
@@ -176,6 +186,7 @@
 (global-set-key [f4]  'goto-line)
 (global-set-key [f5]  'save-buffer-thai)
 (global-set-key [f6]  'find-file)
+(global-set-key [f7] 'neotree-toggle)
 (global-set-key [f10] 'apropos)
 
 

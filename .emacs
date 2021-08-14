@@ -41,6 +41,8 @@
 ;; Enable flycheck globally
 (add-hook 'after-init-hook #'global-flycheck-mode)
 (require 'neotree)
+(setq neo-window-width 30)
+(helm-mode 1)
 ;;; react dev ;;;
 
 
@@ -57,7 +59,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(inhibit-startup-screen t)
- '(package-selected-packages (quote (neotree flycheck web-mode))))
+ '(package-selected-packages '(auto-package-update helm neotree flycheck web-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -181,12 +183,15 @@
 ; des affectations de touches
 (global-set-key [f1]  'point-to-register)
 (global-set-key [f2]  'jump-to-register)
-
 (global-set-key [f3]  'query-replace)
 (global-set-key [f4]  'goto-line)
+
 (global-set-key [f5]  'save-buffer-thai)
-(global-set-key [f6]  'find-file)
+(global-set-key [f6]  'helm-occur)
 (global-set-key [f7] 'neotree-toggle)
+(global-set-key [f8] 'neotree-change-root)
+
+(global-set-key [f9]  'helm-buffers-list)
 (global-set-key [f10] 'apropos)
 
 

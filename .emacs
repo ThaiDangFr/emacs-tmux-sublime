@@ -203,5 +203,8 @@
 
 (add-to-list 'default-frame-alist
                        '(font . "DejaVu Sans Mono-10"))
-;;(load-theme 'misterioso)
-(load-theme 'deeper-blue)
+(load-theme 'misterioso)
+;;(load-theme 'deeper-blue)
+
+; Set cursor color to white
+(set-cursor-color "#ffffff")

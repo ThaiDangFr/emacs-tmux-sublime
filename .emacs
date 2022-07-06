@@ -213,5 +213,5 @@
 ;; pip install virtualenv
 ;; M-x package-install jedi
 ;; M-x jedi:install-server 
-(add-hook 'python-mode-hook 'jedi:setup)
-(setq jedi:complete-on-dot t)      
+;;(add-hook 'python-mode-hook 'jedi:setup)
+;;(setq jedi:complete-on-dot t)      

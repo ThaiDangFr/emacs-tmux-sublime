@@ -3,6 +3,12 @@
 ;;; http://web-mode.org/
 ;;; https://github.com/jaypei/emacs-neotree
 
+;; ALT-X package-install
+;; web-mode
+;; fly-check
+;; neo-tree
+;; helm
+
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)

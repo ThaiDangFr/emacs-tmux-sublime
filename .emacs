@@ -8,6 +8,10 @@
 ;; fly-check
 ;; neo-tree
 ;; helm
+;; yaml-mode
+;;
+;; https://docs.blink.sh/basics/tips-and-tricks 
+;; blink : config/keyboard/option, press and send=none, as modifier=esc
 
 
 (require 'package)

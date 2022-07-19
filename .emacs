@@ -50,6 +50,9 @@
 (flycheck-add-mode 'javascript-eslint 'web-mode)
 ;; Enable flycheck globally
 (add-hook 'after-init-hook #'global-flycheck-mode)
+;; Check only when saving the window
+(setq flycheck-check-syntax-automatically '(mode-enabled save))
+
 (require 'neotree)
 (setq neo-window-width 30)
 (helm-mode 1)
@@ -70,7 +73,7 @@
  ;; If there is more than one, they won't work right.
  '(inhibit-startup-screen t)
  '(package-selected-packages
-   '(jedi yaml-mode auto-package-update helm neotree flycheck web-mode)))
+   '(terraform-mode jedi yaml-mode auto-package-update helm neotree flycheck web-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -225,3 +228,6 @@
 ;; M-x jedi:install-server 
 ;;(add-hook 'python-mode-hook 'jedi:setup)
 ;;(setq jedi:complete-on-dot t)      
+
+
+(windmove-default-keybindings 'meta)

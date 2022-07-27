@@ -5,8 +5,8 @@
 
 ;; ALT-X package-install
 ;; web-mode
-;; fly-check
-;; neo-tree
+;; flycheck
+;; neotree
 ;; helm
 ;; yaml-mode
 ;;
@@ -217,6 +217,8 @@
 
 (add-to-list 'default-frame-alist
                        '(font . "DejaVu Sans Mono-10"))
+
+
 (load-theme 'misterioso)
 ;;(load-theme 'deeper-blue)
 
@@ -231,3 +233,5 @@
 
 
 (windmove-default-keybindings 'meta)
+
+;(setq default-frame-alist '((font . "Source Code Pro-14")))

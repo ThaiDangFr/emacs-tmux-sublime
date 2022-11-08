@@ -9,6 +9,7 @@
 ;; neotree
 ;; helm
 ;; yaml-mode
+;; php-mode
 ;;
 ;; https://docs.blink.sh/basics/tips-and-tricks 
 ;; blink : config/keyboard/option, press and send=none, as modifier=esc
@@ -17,6 +18,8 @@
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
+
+(require 'php-mode)
 
 ;;; react dev ;;;
 (require 'web-mode)
@@ -73,7 +76,7 @@
  ;; If there is more than one, they won't work right.
  '(inhibit-startup-screen t)
  '(package-selected-packages
-   '(terraform-mode jedi yaml-mode auto-package-update helm neotree flycheck web-mode)))
+   '(phps-mode php-mode terraform-mode jedi yaml-mode auto-package-update helm neotree flycheck web-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

@@ -1,0 +1,4 @@
+systemctl --user enable --now emacs
+
+export EDITOR='emacsclient -t'
+export VISUAL='emacsclient -t'

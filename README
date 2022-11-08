@@ -1,4 +1,8 @@
 systemctl --user enable --now emacs
+systemctl start --user emacs
 
+dans .bashrc
 export EDITOR='emacsclient -t'
 export VISUAL='emacsclient -t'
+
+ln -s ~/checkout/emacs/emacsclient.desktop ~/.local/share/applications/

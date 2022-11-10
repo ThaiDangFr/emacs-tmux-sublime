@@ -11,7 +11,7 @@
 ;; yaml-mode
 ;; php-mode
 ;;
-;; https://docs.blink.sh/basics/tips-and-tricks 
+;; https://docs.blink.sh/basics/tips-and-tricks
 ;; blink : config/keyboard/option, press and send=none, as modifier=esc
 
 
@@ -222,7 +222,8 @@
                        '(font . "DejaVu Sans Mono-10"))
 
 
-(load-theme 'misterioso)
+(load-theme 'tango-dark)
+;;(load-theme 'misterioso)
 ;;(load-theme 'deeper-blue)
 
 ; Set cursor color to white
@@ -238,3 +239,4 @@
 (windmove-default-keybindings 'meta)
 
 ;(setq default-frame-alist '((font . "Source Code Pro-14")))
+

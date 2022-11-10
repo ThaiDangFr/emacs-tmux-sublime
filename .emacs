@@ -240,3 +240,5 @@
 
 ;(setq default-frame-alist '((font . "Source Code Pro-14")))
 
+;; prevent flickering
+(modify-all-frames-parameters '((inhibit-double-buffering . t)))

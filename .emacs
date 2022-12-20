@@ -10,6 +10,7 @@
 ;; helm
 ;; yaml-mode
 ;; php-mode
+;; xclip
 ;;
 ;; https://docs.blink.sh/basics/tips-and-tricks
 ;; blink : config/keyboard/option, press and send=none, as modifier=esc
@@ -76,7 +77,7 @@
  ;; If there is more than one, they won't work right.
  '(inhibit-startup-screen t)
  '(package-selected-packages
-   '(phps-mode php-mode terraform-mode jedi yaml-mode auto-package-update helm neotree flycheck web-mode)))
+   '(xclip phps-mode php-mode terraform-mode jedi yaml-mode auto-package-update helm neotree flycheck web-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -242,3 +243,6 @@
 
 ;; prevent flickering
 (modify-all-frames-parameters '((inhibit-double-buffering . t)))
+
+; allows Emacs to copy to and paste from the GUI clipboard when running in text terminal
+(xclip-mode 1)

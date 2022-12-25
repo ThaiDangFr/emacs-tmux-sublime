@@ -1,3 +1,5 @@
+emacs
+-----
 systemctl --user enable --now emacs
 systemctl start --user emacs
 
@@ -6,7 +8,6 @@ export EDITOR='emacsclient -t'
 export VISUAL='emacsclient -t'
 
 ln -s ~/checkout/emacs/emacsclient.desktop ~/.local/share/applications/
-ln -s ~/checkout/emacs/.tmux.conf ~
 ln -s ~/checkout/emacs/.emacs ~
 
 
@@ -14,6 +15,9 @@ tmux
 ----
 # https://doc.ubuntu-fr.org/tmux
 # https://tao-of-tmux.readthedocs.io/en/latest/manuscript/09-status-bar.html
+
+ln -s ~/checkout/emacs/.tmux.conf ~
+
 
 CTRL b + "/%         : split hori/vert
 CTRL b + fleche      : changer de fenetre

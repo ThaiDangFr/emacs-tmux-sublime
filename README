@@ -8,3 +8,14 @@ export VISUAL='emacsclient -t'
 ln -s ~/checkout/emacs/emacsclient.desktop ~/.local/share/applications/
 ln -s ~/checkout/emacs/.tmux.conf ~
 ln -s ~/checkout/emacs/.emacs ~
+
+
+tmux
+----
+# https://doc.ubuntu-fr.org/tmux
+# https://tao-of-tmux.readthedocs.io/en/latest/manuscript/09-status-bar.html
+
+CTRL b + "/%         : split hori/vert
+CTRL b + fleche      : changer de fenetre
+CTRL b + CTRL fleche : redimentionner
+

@@ -15,6 +15,7 @@ tmux
 ----
 # https://doc.ubuntu-fr.org/tmux
 # https://tao-of-tmux.readthedocs.io/en/latest/manuscript/09-status-bar.html
+# https://rudra.dev/posts/a-mininal-tmux-configuration-from-scratch/
 
 ln -s ~/checkout/emacs/.tmux.conf ~
 

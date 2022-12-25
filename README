@@ -6,3 +6,5 @@ export EDITOR='emacsclient -t'
 export VISUAL='emacsclient -t'
 
 ln -s ~/checkout/emacs/emacsclient.desktop ~/.local/share/applications/
+ln -s ~/checkout/emacs/.tmux.conf ~
+ln -s ~/checkout/emacs/.emacs ~

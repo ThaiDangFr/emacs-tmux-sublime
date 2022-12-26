@@ -17,8 +17,10 @@ tmux
 # https://tao-of-tmux.readthedocs.io/en/latest/manuscript/09-status-bar.html
 # https://rudra.dev/posts/a-mininal-tmux-configuration-from-scratch/
 
+sudo dnf install xsel
 ln -s ~/checkout/emacs/.tmux.conf ~
-
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+~/.tmux/plugins/tpm/bin/install_plugins
 
 CTRL b + "/%         : split hori/vert
 CTRL b + fleche      : changer de fenetre

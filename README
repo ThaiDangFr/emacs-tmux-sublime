@@ -26,3 +26,5 @@ CTRL b + "/%         : split hori/vert
 CTRL b + fleche      : changer de fenetre
 CTRL b + CTRL fleche : redimentionner
 
+# reinit tmux avec la conf
+tmux source ~/.tmux.conf

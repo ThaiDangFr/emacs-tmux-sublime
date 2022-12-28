@@ -7,8 +7,8 @@ dans .bashrc
 export EDITOR='emacsclient -t'
 export VISUAL='emacsclient -t'
 
-ln -s ~/checkout/emacs/emacsclient.desktop ~/.local/share/applications/
-ln -s ~/checkout/emacs/.emacs ~
+ln -s ~/checkout/emacs-tmux/emacsclient.desktop ~/.local/share/applications/
+ln -s ~/checkout/emacs-tmux/.emacs ~
 
 
 tmux
@@ -18,7 +18,7 @@ tmux
 # https://rudra.dev/posts/a-mininal-tmux-configuration-from-scratch/
 
 sudo dnf install xsel tmux tmux-powerline
-ln -s ~/checkout/emacs/.tmux.conf ~
+ln -s ~/checkout/emacs-tmux/.tmux.conf ~
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ~/.tmux/plugins/tpm/bin/install_plugins
 

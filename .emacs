@@ -2,6 +2,7 @@
 ;;; REACT https://gist.github.com/CodyReichert/9dbc8bd2a104780b64891d8736682cea
 ;;; http://web-mode.org/
 ;;; https://github.com/jaypei/emacs-neotree
+;;; https://medspx.fr/blog/Debian/emacs_2020/
 
 ;; ALT-X package-install
 ;; web-mode
@@ -11,6 +12,7 @@
 ;; yaml-mode
 ;; php-mode
 ;; xclip
+;; which-key
 ;;
 ;; https://docs.blink.sh/basics/tips-and-tricks
 ;; blink : config/keyboard/option, press and send=none, as modifier=esc
@@ -77,7 +79,7 @@
  ;; If there is more than one, they won't work right.
  '(inhibit-startup-screen t)
  '(package-selected-packages
-   '(xclip phps-mode php-mode terraform-mode jedi yaml-mode auto-package-update helm neotree flycheck web-mode)))
+   '(which-key xclip phps-mode php-mode terraform-mode jedi yaml-mode auto-package-update helm neotree flycheck web-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -101,11 +103,6 @@
 
 (setq european-calendar-style 't)
 (setq calendar-week-start-day 1)
-;(setq calendar-day-name-array
-;["Dimanche" "Lundi" "Mardi" "Mercredi" "Jeudi" "Vendredi" "Samedi"])
-;(setq calendar-month-name-array
-;["Janvier" "Fevrier" "Mars" "Avril" "Mai" "Juin" "Juillet"
-;"Aout" "Septembre" "Octobre" "Novembre" "Decembre"])
 
 ;; Show the time in the minibuffer
 (display-time)
@@ -230,13 +227,6 @@
 ; Set cursor color to white
 (set-cursor-color "#ffffff")
 
-;; pip install virtualenv
-;; M-x package-install jedi
-;; M-x jedi:install-server 
-;;(add-hook 'python-mode-hook 'jedi:setup)
-;;(setq jedi:complete-on-dot t)      
-
-
 (windmove-default-keybindings 'meta)
 
 ;(setq default-frame-alist '((font . "Source Code Pro-14")))
@@ -246,3 +236,6 @@
 
 ; allows Emacs to copy to and paste from the GUI clipboard when running in text terminal
 (xclip-mode 1)
+
+(which-key-setup-side-window-bottom)
+(which-key-mode t)

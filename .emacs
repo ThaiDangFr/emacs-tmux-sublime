@@ -1,8 +1,11 @@
-;;; MELPA https://melpa.org/#/getting-started
-;;; REACT https://gist.github.com/CodyReichert/9dbc8bd2a104780b64891d8736682cea
-;;; http://web-mode.org/
-;;; https://github.com/jaypei/emacs-neotree
-;;; https://medspx.fr/blog/Debian/emacs_2020/
+;;; .emacs --- Initialization file for Emacs
+;;; Commentary:
+
+;; MELPA https://melpa.org/#/getting-started
+;; REACT https://gist.github.com/CodyReichert/9dbc8bd2a104780b64891d8736682cea
+;; http://web-mode.org/
+;; https://github.com/jaypei/emacs-neotree
+;; https://medspx.fr/blog/Debian/emacs_2020/
 
 ;; ALT-X package-install
 ;; web-mode
@@ -13,6 +16,8 @@
 ;; php-mode
 ;; xclip
 ;; which-key
+;; centaur-tabs
+;; vterm
 ;;
 ;; https://docs.blink.sh/basics/tips-and-tricks
 ;; blink : config/keyboard/option, press and send=none, as modifier=esc
@@ -61,6 +66,7 @@
 
 (require 'neotree)
 (setq neo-window-width 30)
+(setq-default neo-show-hidden-files t)
 (helm-mode 1)
 ;;; react dev ;;;
 
@@ -79,7 +85,7 @@
  ;; If there is more than one, they won't work right.
  '(inhibit-startup-screen t)
  '(package-selected-packages
-   '(which-key xclip phps-mode php-mode terraform-mode jedi yaml-mode auto-package-update helm neotree flycheck web-mode)))
+   '(vterm which-key xclip phps-mode php-mode terraform-mode jedi yaml-mode auto-package-update helm neotree flycheck web-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -239,3 +245,21 @@
 
 (which-key-setup-side-window-bottom)
 (which-key-mode t)
+
+; tabs
+(require 'centaur-tabs)
+(centaur-tabs-mode t)
+(global-set-key (kbd "C-<prior>")  'centaur-tabs-backward)
+(global-set-key (kbd "C-<next>") 'centaur-tabs-forward)
+(centaur-tabs-headline-match)
+(setq centaur-tabs-style "bar")
+(setq centaur-tabs-height 32)
+(setq centaur-tabs-set-icons t)
+(setq centaur-tabs-set-modified-marker t)
+(setq centaur-tabs-modified-marker "*")
+
+; terminal vterm
+; dnf install cmake libvterm libvterm-devel
+(require 'vterm)
+(setq vterm-kill-buffer-on-exit t
+      vterm-shell "/bin/bash")

@@ -249,14 +249,15 @@
 ; tabs
 (require 'centaur-tabs)
 (centaur-tabs-mode t)
-(global-set-key (kbd "C-<prior>")  'centaur-tabs-backward)
-(global-set-key (kbd "C-<next>") 'centaur-tabs-forward)
+;(global-set-key (kbd "C-<prior>")  'centaur-tabs-backward)
+;(global-set-key (kbd "C-<next>") 'centaur-tabs-forward)
 (centaur-tabs-headline-match)
 (setq centaur-tabs-style "bar")
 (setq centaur-tabs-height 32)
 (setq centaur-tabs-set-icons t)
 (setq centaur-tabs-set-modified-marker t)
 (setq centaur-tabs-modified-marker "*")
+(setq centaur-tabs-cycle-scope 'tabs)
 
 ; terminal vterm
 ; dnf install cmake libvterm libvterm-devel

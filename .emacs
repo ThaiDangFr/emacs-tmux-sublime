@@ -15,9 +15,9 @@
 ;; yaml-mode
 ;; php-mode
 ;; xclip
-;; which-key
 ;; centaur-tabs
 ;; vterm
+;; undo-tree
 ;;
 ;; https://docs.blink.sh/basics/tips-and-tricks
 ;; blink : config/keyboard/option, press and send=none, as modifier=esc
@@ -85,7 +85,7 @@
  ;; If there is more than one, they won't work right.
  '(inhibit-startup-screen t)
  '(package-selected-packages
-   '(vterm which-key xclip phps-mode php-mode terraform-mode jedi yaml-mode auto-package-update helm neotree flycheck web-mode)))
+   '(undo-tree vterm xclip phps-mode php-mode terraform-mode jedi yaml-mode auto-package-update helm neotree flycheck web-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -243,8 +243,9 @@
 ; allows Emacs to copy to and paste from the GUI clipboard when running in text terminal
 (xclip-mode 1)
 
-(which-key-setup-side-window-bottom)
-(which-key-mode t)
+; package which-key pour avoir la liste des shortcut
+;(which-key-setup-side-window-bottom)
+;(which-key-mode t)
 
 ; tabs
 (require 'centaur-tabs)
@@ -262,5 +263,10 @@
 ; terminal vterm
 ; dnf install cmake libvterm libvterm-devel
 (require 'vterm)
-(setq vterm-kill-buffer-on-exit t
-      vterm-shell "/bin/bash")
+(setq vterm-kill-buffer-on-exit t)
+(setq vterm-shell "/bin/bash")
+
+; undo tree
+(require 'undo-tree)
+(global-undo-tree-mode)
+(setq undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo")))

@@ -1,0 +1,109 @@
+#+STARTUP: showall indent
+* tasks
+** DONE faire le tutoriel org mode
+** TODO test2
+
+* raccourcis utile 
+alt shift fleche : deplace l'item
+ctrl c ctrl t : TODO -> DONE
+ctrl c ctrl o : ouvrir un lien
+shift tab : collapse expand all
+tab : collapse expand
+ctrl c ctrl c : coche la case
+alt maj ret : ajoute cache a cocher
+alt ret : rajoute - *
+
+* lien vers site
+ceci est un lien vers google [[https://www.google.com][google]]
+en utilisant la syntaxe [[sec-1.2][descriptio
+
+* listes à puces -> alt ret
+  - ligne 1
+  - ligne 2 avec alt shift ret
+  - ligne 3
+
+* listes numérotées -> alt ret
+  1) à faire 1
+  2) à faire 2
+
+* cases à cocher -> alt maj ret
+  - [ ] coche 1
+  - [ ] coche 2
+  - [ ] coche 3
+
+* tableau
+# Abreviation
+# S = Shift
+# M = Alt
+# C = Ctrl
+
+
+# |  pour commencer un tableau
+# |- pour faire une tracer une ligne
+# |Name|Phone|Age ctrl c ret
+# tab : avancer de colonne
+# shift tab : reculer de colonne
+# C-c C-c : realign ou execute les formules si sur TBLFM
+# Shift-fleche : deplace une case
+# M-S-bas : rajoute une ligne au dessus
+# M-S-droite : rajoute une colonne a gauche
+# M-S- droite ou haut : supprime
+# C-c - : rajoute une ligne dessous
+# C-c ^ : sort la colonne
+# C-c + : additionne la colonne
+# := vmean($4..$5) : moyenne du champ de la 4ieme et 5ieme colonne
+# = vmean($4..$5) : pareil que :=vmean mais pour chaque ligne -> C-c C-c sur la ligne TBLFM permet d'exécuter l'action de tout calculer
+# @<ligne>$<colonne> : coordonnée dans le tableau
+# M-x org-table-recalculate-buffer-tables : recalcul toutes les tables
+# C-c } : visualise les coordonnées du tableau
+
+
+| Name  | Phone | Age | Math | Physics | Mean |
+|-------+-------+-----+------+---------+------|
+| Anna  |  4321 |  25 |   13 |      12 | 12.5 |
+| Peter |  1234 |  17 |   15 |      11 |   13 |
+|-------+-------+-----+------+---------+------|
+| Means |       |  21 |   14 |    11.5 |      |
+#+TBLFM: @2$6=vmean($4..$5)::@3$6=vmean($4..$5)::@4$3=vmean(@2$3..@3$3)::@4$4=vmean(@2$4..@3$4)::@4$5=vmean(@2$5..@3$5)
+
+| aza | dszaz |  az |
+|-----+-------+-----|
+|   1 |   222 |   3 |
+|   1 |     6 | 455 |
+
+
+* inclusion de code
+# C-c C-, : insère un #+begin_src
+# C-c C-c : évalue
+
+#+begin_src emacs-lisp
+  (message "hello lisp")
+#+end_src
+
+#+RESULTS:
+: hello lisp
+
+
+* undo tree comme sur neovim
+C-x u
+
+* bindings
+# https://www.emacswiki.org/emacs/ChoosingKeysToBind
+# C-c <lettre> : réservé pour les users
+# f5 -> f9 : pour les users aussi
+# C-h ? : help
+# C-h k : pour savoir quel binding est associé
+# M-% : query-replace
+# C-x g : magit -> q (quit) s (stage) u (unstage) c (commit) C-c C-c (commit msg) P (push)
+# C-c c : autocompletion company (binding custom)
+
+* auto complétion et popup de choix
+package-install company
+
+#+begin_src shell
+  echo "hello shell"
+#+end_src
+
+#+RESULTS:
+: hello shell
+

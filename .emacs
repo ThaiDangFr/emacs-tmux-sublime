@@ -20,6 +20,7 @@
 ;; vterm
 ;; undo-tree
 ;; magit
+;; company
 ;;
 ;; https://docs.blink.sh/basics/tips-and-tricks
 ;; blink : config/keyboard/option, press and send=none, as modifier=esc
@@ -87,7 +88,7 @@
  ;; If there is more than one, they won't work right.
  '(inhibit-startup-screen t)
  '(package-selected-packages
-   '(magit undo-tree vterm xclip phps-mode php-mode terraform-mode jedi yaml-mode auto-package-update helm neotree flycheck web-mode)))
+   '(company magit undo-tree vterm xclip phps-mode php-mode terraform-mode jedi yaml-mode auto-package-update helm neotree flycheck web-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -204,18 +205,17 @@
 )
 
 ; des affectations de touches
-(global-set-key [f1]  'point-to-register)
-(global-set-key [f2]  'jump-to-register)
-(global-set-key [f3]  'query-replace)
-(global-set-key [f4]  'goto-line)
+;(global-set-key [f1]  'point-to-register)
+;(global-set-key [f2]  'jump-to-register)
+;(global-set-key [f3]  'query-replace)
+;(global-set-key [f4]  'goto-line)
 
 (global-set-key [f5]  'save-buffer-thai)
 (global-set-key [f6]  'helm-occur)
 (global-set-key [f7] 'neotree-toggle)
 (global-set-key [f8] 'neotree-change-root)
-
 (global-set-key [f9]  'helm-buffers-list)
-(global-set-key [f10] 'apropos)
+;(global-set-key [f10] 'apropos)
 
 
 
@@ -272,3 +272,13 @@
 (require 'undo-tree)
 (global-undo-tree-mode)
 (setq undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo")))
+
+; company (autocompletion)
+(add-hook 'after-init-hook 'global-company-mode)
+(setq company-idle-delay nil)
+(global-set-key (kbd "C-c c") 'company-complete)
+
+; activation de babel languages pour utilisation dans org mode #+begin_src shell
+(org-babel-do-load-languages
+'org-babel-load-languages
+'((shell . t)))

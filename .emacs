@@ -6,6 +6,7 @@
 ;; http://web-mode.org/
 ;; https://github.com/jaypei/emacs-neotree
 ;; https://medspx.fr/blog/Debian/emacs_2020/
+;; https://www.masteringemacs.org/article/introduction-magit-emacs-mode-git
 
 ;; ALT-X package-install
 ;; web-mode
@@ -18,6 +19,7 @@
 ;; centaur-tabs
 ;; vterm
 ;; undo-tree
+;; magit
 ;;
 ;; https://docs.blink.sh/basics/tips-and-tricks
 ;; blink : config/keyboard/option, press and send=none, as modifier=esc
@@ -85,7 +87,7 @@
  ;; If there is more than one, they won't work right.
  '(inhibit-startup-screen t)
  '(package-selected-packages
-   '(undo-tree vterm xclip phps-mode php-mode terraform-mode jedi yaml-mode auto-package-update helm neotree flycheck web-mode)))
+   '(magit undo-tree vterm xclip phps-mode php-mode terraform-mode jedi yaml-mode auto-package-update helm neotree flycheck web-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

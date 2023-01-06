@@ -96,6 +96,7 @@ C-x u
 # M-% : query-replace
 # C-x g : magit -> q (quit) s (stage) u (unstage) c (commit) C-c C-c (commit msg) P (push)
 # C-c c : autocompletion company (binding custom)
+# C-x C-b : liste de buffer -> d (marquer a effacer) x (execute la suppression)
 
 * auto complétion et popup de choix
 package-install company

@@ -1,4 +1,11 @@
 #+STARTUP: showall indent
+#+OPTIONS: toc:nil num:nil
+#+LaTeX_CLASS: article
+#+LaTeX_CLASS_OPTIONS: [8pt,a4paper]
+
+
+# https://github.com/fniessen/refcard-org-mode
+
 * tasks
 ** DONE faire le tutoriel org mode
 ** TODO test2
@@ -108,3 +115,61 @@ package-install company
 #+RESULTS:
 : hello shell
 
+* emplacement gauche
+#+LATEX: \noindent
+#+ATTR_LATEX: :center nil
+| a | b | c |
+|---+---+---|
+| 1 | 2 | 3 |
+| 4 | 5 | 6 |
+#+LATEX: \hfill
+
+* emplacement droite
+#+LATEX: \hfill
+#+ATTR_LATEX: :center nil
+| a | b | c |
+|---+---+---|
+| 1 | 2 | 3 |
+| 4 | 5 | 6 |
+
+* emplacement gauche droite
+
+#+begin_export latex
+
+\begin{minipage}{0.3\textwidth}
+\includegraphics[width=\linewidth]{sample/image.jpg}
+\end{minipage}
+\begin{minipage}{0.6\textwidth}\raggedleft
+This test is supposed\\
+to be algnes\\
+to left\\
+\end{minipage}
+\noindent
+\\
+this is perfect it seems
+
+#+end_export
+
+
+* fragment de latex
+#+begin_export latex
+\setlength{\unitlength}{1cm}
+\thicklines
+\begin{picture}(10,6)
+\put(2,2.2){\line(1,0){6}}
+\put(2,2.2){\circle{2}}
+\put(6,2.2){\oval(4,2)[r]}
+\end{picture}
+#+end_export
+
+
+* couleur
+
+* lignes
+
+texte au dessus
+-----
+texte en dessous
+
+
+* inclure un .org dans un autre

@@ -9,6 +9,8 @@
 ;; https://www.masteringemacs.org/article/introduction-magit-emacs-mode-git
 
 ;; ALT-X package-install
+;; async
+;; compat
 ;; web-mode
 ;; flycheck
 ;; neotree
@@ -28,6 +30,9 @@
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/") t)
+;(add-to-list 'package-archives '("gnu-devel" . "https://elpa.gnu.org/devel/") t)
+
 (package-initialize)
 
 (require 'php-mode)
@@ -88,7 +93,9 @@
  ;; If there is more than one, they won't work right.
  '(inhibit-startup-screen t)
  '(package-selected-packages
-   '(company magit undo-tree vterm xclip phps-mode php-mode terraform-mode jedi yaml-mode auto-package-update helm neotree flycheck web-mode)))
+   '(company magit undo-tree vterm centaur-tabs xclip php-mode async yaml-mode helm neotree flycheck web-mode compat phps-mode terraform-mode auto-package-update))
+ '(safe-local-variable-values '((eval org-cv-local-variables)))
+ '(warning-suppress-log-types '((comp))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

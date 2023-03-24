@@ -84,7 +84,12 @@
           (lambda ()
           (require 'dired-x)))
 
+;; ctrl-c ctrl-v ctrl-x
+;; to indent python code left or right with cua-mode enabled :
+;; use the SHIFT key with the prefix key, C-S-c > 
 (cua-mode 1)
+
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -288,4 +293,15 @@
 ; activation de babel languages pour utilisation dans org mode #+begin_src shell
 (org-babel-do-load-languages
 'org-babel-load-languages
-'((shell . t)))
+'((shell . t) (python . t))
+)
+
+; force utf-8 même pour windows
+(set-language-environment "UTF-8")
+
+;;; fix indentation pb in python org mode
+;;; use ctrl c ' to edit in a special editor in org mode
+(setq org-edit-src-content-indentation 0
+      org-src-tab-acts-natively t
+      org-src-preserve-indentation t)
+

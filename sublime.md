@@ -9,6 +9,9 @@ CI640
 	"update_check": false,
 	"auto_complete": false, 
 	"index_files": true,
+	"default_line_ending": "unix",
+	"show_encoding": true,
+	"show_line_endings": true	
 }
 ```
 

@@ -11,7 +11,8 @@ CI640
 	"index_files": true,
 	"default_line_ending": "unix",
 	"show_encoding": true,
-	"show_line_endings": true	
+	"show_line_endings": true,
+    "translate_tabs_to_spaces": true
 }
 ```
 
@@ -32,6 +33,7 @@ Windows
 	"index_files": true,
 	"default_line_ending": "unix",
 	"show_encoding": true,
-	"show_line_endings": true
+	"show_line_endings": true,
+    "translate_tabs_to_spaces": true
 }
 ```

@@ -236,8 +236,8 @@
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
 
-(add-to-list 'default-frame-alist
-                       '(font . "DejaVu Sans Mono-10"))
+;(add-to-list 'default-frame-alist
+;                       '(font . "DejaVu Sans Mono-10"))
 
 
 (load-theme 'tango-dark)
@@ -305,3 +305,5 @@
       org-src-tab-acts-natively t
       org-src-preserve-indentation t)
 
+;;; erreurs pdflatex: error while loading shared libraries: libpoppler.so.123: cannot open shared object file: No such file or directory
+;;; faire : alt-x pdf-tools-install

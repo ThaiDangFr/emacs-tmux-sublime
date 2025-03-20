@@ -16,8 +16,7 @@ CI640
 	"tab_completion": false,
 	"tab_size": 2,
 
-	"font_size": 10,
-	"save_on_focus_lost": true,
+	"save_on_focus_lost": false,
 	"highlight_line": true,
 	"caret_style": "phase",
 }
@@ -41,6 +40,10 @@ Windows
 	"default_line_ending": "unix",
 	"show_encoding": true,
 	"show_line_endings": true,
-  "translate_tabs_to_spaces": true
+  "translate_tabs_to_spaces": true,
+
+	"save_on_focus_lost": false,
+	"highlight_line": true,
+	"caret_style": "phase",  
 }
 ```
